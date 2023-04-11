@@ -1,7 +1,7 @@
 
 # Chess Bot Webhook
 
-A Script that notifies you through a Discord Webhook when a game of chess has been played  on [Chess.com](https://chess.com).
+A Script that notifies you through a Discord Webhook when a game of chess has been played  on [Chess.com](https://chess.com)
 ## Requirements
 
 * `Python 3.6` or above
