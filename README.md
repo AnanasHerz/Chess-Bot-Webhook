@@ -12,8 +12,6 @@ A Script that notifies you through a Discord Webhook when a game of chess has be
 Python libraries
 ```bash
   pip install discord-webhook
-  pip install DateTime
-  pip install pytz
   pip install requests
 ```
 ## Embed demo
