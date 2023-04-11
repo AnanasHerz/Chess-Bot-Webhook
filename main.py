@@ -5,6 +5,8 @@ import time
 w = open("webhook.txt", "r")
 webhook_url = w.read()
 
+print('Running...') #Debug message on ready
+
 def loop():
     while True:
         #Webhook
