@@ -16,9 +16,9 @@ Python libraries:
   pip install pytz
   pip install requests
 ```
-## Embed demo
-
-![Demo](https://github.com/AnanasHerz/Chess-Bot-Webhook/blob/main/demo.png?raw=true)
 ## Usage
 
 Replace the contents of the variable `player` in `line 15` to your [Chess.com](https://chess.com) username.
+## Embed demo
+
+![Demo](https://github.com/AnanasHerz/Chess-Bot-Webhook/blob/main/demo.png?raw=true)
