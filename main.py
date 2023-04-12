@@ -118,8 +118,10 @@ def loop():
                 #Sending the message or not
                 webhook.execute()
                 print('Webhook send!')
+                time.sleep(5)
                 loop()
             if suspected_last_game == last_game:
+                time.sleep(5)
                 loop()
             else:
                 pass
@@ -130,4 +132,3 @@ def loop():
         print('Status code: ', check.status_code)
         exit()
 loop()
-time.sleep(5)
