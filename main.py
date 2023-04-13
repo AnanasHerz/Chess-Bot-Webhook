@@ -21,6 +21,8 @@ def loop():
     side = ''
     opponent = ''
     endboard = ''
+    global restart
+    restart = False
     if check.status_code == 200:
         archive = requests.get(f'https://api.chess.com/pub/player/{player}/games/archives').json()
         newest_arc = int(len(archive['archives']))-1
@@ -119,16 +121,16 @@ def loop():
                 webhook.execute()
                 print('Webhook send!')
                 time.sleep(5)
-                loop()
+                return
             if suspected_last_game == last_game:
                 time.sleep(5)
-                loop()
-            else:
-                pass
+                return
         if requests.get(most_recent_archive).status_code == 200 and archive == '[]':
             print('Empty archive')
-            loop()
+            return True
     if check.status_code != 200:
         print('Status code: ', check.status_code)
         exit()
-loop()
+        
+while True:
+    loop()
