@@ -120,10 +120,10 @@ def loop():
                 #Sending the message or not
                 webhook.execute()
                 print('Webhook send!')
-                time.sleep(60)
+                time.sleep(30)
                 return
             if suspected_last_game == last_game:
-                time.sleep(60)
+                time.sleep(30)
                 return
         if requests.get(most_recent_archive).status_code == 200 and archive == '[]':
             print('Empty archive')
