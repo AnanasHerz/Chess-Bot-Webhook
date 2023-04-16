@@ -19,6 +19,7 @@ def loop():
     result = ''
     reason = ''
     side = ''
+    color = ''
     opponent = ''
     endboard = ''
     global restart
@@ -56,9 +57,11 @@ def loop():
                 #Defines the sides
                 if response['games'][newest]['white']['username'] == player:
                     side = response['games'][newest]['white']
+                    color = 'white'
                     opponent = response['games'][newest]['black']
                 if response['games'][newest]['black']['username'] == player:
                     side = response['games'][newest]['black']
+                    color = 'black'
                     opponent = response['games'][newest]['white']
                 if response['games'][newest]['white']['username'] != player and response['games'][newest]['black']['username'] != player:
                     side = 'invalid colors'
@@ -109,7 +112,7 @@ def loop():
                 #Alert                
                 alert = DiscordEmbed(
                     title = f'{player} just played a game of chess!',
-                    description = f'{player} played {rated} {time_class} game and {result} by {reason}.',
+                    description = f'{player} played as {color} {rated} {time_class} game and {result} by {reason}.',
                     color = '769656'
                 )
                 alert.set_author(name='Chess Bot', icon_url='https://play-lh.googleusercontent.com/a7R5nyeaX8lIEWdBOxjlvbyq9LcFwh3XMvNtBPEKR3LPGgdvgGrec4sJwn8tUaaSkw')
